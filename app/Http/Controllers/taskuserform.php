@@ -21,7 +21,9 @@ class taskuserform extends Controller
             "gender"   => "required"
         ]);
 
-        echo "dataInserted Sucessfully......";
+       echo "dataInserted Sucessfully......";
+        //dd($requ->all());
+        dd($requ->except(['_token']));
     }
 
 }
