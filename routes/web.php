@@ -21,12 +21,21 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route:: get('blog/create',[usercontroller::class,'create']);
+Route:: get('student/create',[usercontroller::class,'create']);
+Route:: post('student/store',[usercontroller::class,'store']);
+Route:: get('student',[usercontroller::class,'index']);
+Route:: get('student/edit/{id}',[usercontroller::class,'edit']);
+Route:: post('student/update',[usercontroller::class,'update']);
+Route::get('student/remove/{id}', [usercontroller::class, 'delete']);
+Route::get('login', [usercontroller::class, 'login']);
+Route::post('DoLogin', [usercontroller::class, 'DoLogin']);
+Route::get('logout', [usercontroller::class, 'logout']);
 
-Route:: post('blog/store',[usercontroller::class,'validation']);
 
 
 
-Route:: get('taskuserform/create',[taskuserform::class,'taskuserform']);
-Route:: post('taskuserform/store',[taskuserform::class,'store']);
+
+
+// Route:: get('taskuserform/create',[taskuserform::class,'taskuserform']);
+// Route:: post('taskuserform/store',[taskuserform::class,'store']);
 

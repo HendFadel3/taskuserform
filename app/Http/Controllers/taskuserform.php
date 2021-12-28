@@ -22,6 +22,10 @@ class taskuserform extends Controller
         ]);
 
         echo "dataInserted Sucessfully......";
+        //dd($requ->all());
+        dd($requ->except(['_token']));
+
+
     }
 
 }

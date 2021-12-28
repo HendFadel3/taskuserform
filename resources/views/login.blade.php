@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <title>Student</title>
+  <title>login</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
@@ -21,18 +21,14 @@
         </ul>
     </div>
 @endif
-  <h2>Student</h2>
+  <h2>login</h2>
  
  
-  <form  action="<?php echo url('/student/store')?>"   method="post"  enctype="multipart/form-data" >
+  <form  action="<?php echo url('/DoLogin')?>"   method="post"  >
 
   <input type = "hidden" name="_token" value="<?php echo csrf_token();?>">
 
-  <div class="form-group">
-    <label for="exampleInputName">Name</label>
-    <input type="text" class="form-control" id="exampleInputName"  name="name" aria-describedby="" placeholder="Enter Name">
-  </div>
-
+  
 
   <div class="form-group">
     <label for="exampleInputEmail">Email </label>
@@ -46,16 +42,13 @@
   </div>
 
 
-  <label for="img">Select CV:</label>
-  <input type="file" id="img" name="cv" >
   
- <br></br>
 
 
 
   
   
-  <button type="submit" class="btn btn-primary">Submit</button>
+  <button type="submit" class="btn btn-primary">login</button>
 </form>
 </div>
 
